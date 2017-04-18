@@ -16,7 +16,7 @@
 			<h1>Restaurant Store Application</h1>
 			<br/>
 			<img id="logo" src="images/default.png"/>
-			<p>Connecting and sharing with people since 2017</p>
+			<p>*Slogan*</p>
 		</span>
 	</div>
 

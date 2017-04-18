@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Home</title>
+		<title>Welcome</title>
 		<meta charset="UTF-8" />
 		<link href="CSS/style.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="scripts/jquery.js" ></script>
@@ -29,28 +29,25 @@
 				<h1>Restaurant Store Application</h1>
 				<br/>
 				<img id="logo" src="images/default.png"/>
-				<p><i>"Connecting and sharing with people since 2017"</i></p>
+				<p><i>"Restaurant Slogan"</i></p>
 			</span>
 		</div>
 
-		<h2>HOME</h2>
+		<h2>Home Page</h2>
 		<ul id="menu">
-			<li> HOME</li>
-			<li id="ProfilePage"> Profile </li>
-			<li> About Site</li>
-			<li id="FriendsPage"> Friends</li>
-			<li> Contact</li>
+			<li> Home Page</li>
+			<li id=""> Menu </li>
+			<li> About Restaurant </li>
+			<li id=""> Login </li>
+			<li> Registration </li>
 			<li> copyright</li>
 			
 		</ul>
 
-		<div>
-			<h3>Welcome <?php echo $userfName." ".$userlName; ?>  </h3>
-		</div>
 
-		<div id="CommentsFeed">
-			<h1>Comments</h1>
-			<ul id="CommentList">
+		<div id="PromotionsSpace">
+			<h1>PROMOTIONS SPACE</h1>
+			<ul id="PromoList">
 				
 			</ul>
 		</div>
@@ -61,9 +58,6 @@
 			<input id="AddCommbtn" type="submit" value="Add Comment"/>
 		</div>
 
-		<div>
-			<input id="Logoutbtn" type="submit" value="Logout"/>
-		</div>
 
 	</body>
 

@@ -1,0 +1,119 @@
+body {
+	font-family: Verdana, sand-serif;
+	font-size: 13px;
+	color: #4F545F;
+	margin:  0;
+	padding: 0;
+}
+
+h1{
+	background-color: #55B3C5;
+	margin: 0;
+	padding: 20px;
+	color: white;
+}
+h2{
+	background-color: #54A2DC;
+	margin: 0;
+	padding: 20px;
+	color: white;
+	text-align: center;
+}
+fieldset{
+	border: 2px dashed #dddddd;
+	margin: 20px;
+	padding: 20px;
+}
+
+legend{
+	font-size: 1.3em;
+	font-weight: 900;
+}
+
+fieldset > span#InformationSpan{
+	background: url('../images/infoicon.png') no-repeat center left #CCE9F8;
+	border: 1px solid #6278B0;
+	color: #42579C;
+	padding:  20px 40px;
+	display: block;
+}
+
+fieldset >span{
+	color: #FF0000;
+}
+
+.formElement{
+	font-size: 1em;
+	padding: 5px 10x;
+	width: 300px;
+}
+
+select{
+	font-size: 2em;
+	width: 250px;
+}
+
+#LoginBtn{
+	text-align: center;
+	background: #56C56F;
+}
+#RegistrationBtn{
+	text-align: center;
+	background: #56C56F;
+}
+#cancelbtn{
+	text-align: center;
+	background: #D9534F;
+}
+.idWrongCredentials{
+	background-color: #FF0000;
+	margin: 0;
+	padding: 20px;
+	color: black;
+	align-self: center;
+	visibility: hidden;
+}
+
+input[type=submit]{
+	padding: 10px 20px;
+	font-size: 1.3em;
+	color: white;
+	background-color: green;
+	margin: 0 0 0 20px;
+	border: 0;
+}
+
+input[type=submit]:hover{
+	cursor: pointer;
+}
+
+input[type=text]{
+   width: 25%;
+   box-sizing: border-box;
+}
+
+#CommentBox{
+	width: 25%;
+   padding: 10px 10px 20px;
+   margin: 10px 0px 100px 20px;
+   box-sizing: border-box;
+}
+
+ul#menu{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #CCC;
+	overflow: hidden; /*Desconecta los elementos extra*/
+	text-align: center;
+}
+ul#menu li{
+	padding: 20px 50px 20px 50px;
+	display: inline-block;
+}
+
+ul#menu li:hover, ul#menu li.selected{
+	background-color: #999;
+	color: white;
+	cursor: pointer;
+}
