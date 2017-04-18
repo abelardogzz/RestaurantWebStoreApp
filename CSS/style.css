@@ -1,9 +1,11 @@
 body {
 	font-family: Verdana, sand-serif;
+	font-weight: 600;
 	font-size: 13px;
 	color: #4F545F;
 	margin:  0;
 	padding: 0;
+	background-color: #FFEB5B;
 }
 p{
 	font-family: Verdana, sand-serif;
@@ -14,7 +16,7 @@ p{
 }
 
 h1{
-	background-color: #55B3C5;
+	background-color: #DE4A00;
 	margin: 0;
 	padding: 20px;
 	color: white;
@@ -27,9 +29,16 @@ h2{
 	text-align: center;
 }
 fieldset{
-	border: 2px dashed #dddddd;
-	margin: 20px;
-	padding: 20px;
+	border: 2px dashed #094074;
+	margin: 30px auto;
+	padding: 50px;
+	width: 300px;
+}
+
+div.images {
+	margin-right: auto;
+	margin-left: 0;
+	background-color: #DE4A00;
 }
 
 legend{
@@ -62,11 +71,11 @@ select{
 
 #LoginBtn{
 	text-align: center;
-	background: #56C56F;
+	background: #094074;
 }
 #RegistrationBtn{
 	text-align: center;
-	background: #56C56F;
+	background: #094074;
 }
 #cancelbtn{
 	text-align: center;
@@ -85,9 +94,10 @@ input[type=submit]{
 	padding: 10px 20px;
 	font-size: 1.3em;
 	color: white;
-	background-color: green;
+	background-color: #094074;
 	margin: 0 0 0 20px;
 	border: 0;
+	border-radius: 10px
 }
 
 input[type=submit]:hover{
@@ -95,8 +105,11 @@ input[type=submit]:hover{
 }
 
 input[type=text]{
-   width: 25%;
-   box-sizing: border-box;
+   width: 75%;
+}
+
+input[type=password]{
+   width: 75%;
 }
 
 #CommentBox{
@@ -110,9 +123,10 @@ ul#menu{
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	background-color: #CCC;
+	background-color: #094074;
 	overflow: hidden; /*Desconecta los elementos extra*/
 	text-align: center;
+	color: white;
 }
 ul#menu li{
 	padding: 20px 50px 20px 50px;
@@ -120,11 +134,7 @@ ul#menu li{
 }
 
 ul#menu li:hover, ul#menu li.selected{
-	background-color: #999;
-	color: white;
+	background-color: #2C8FDB;
+	color: black;
 	cursor: pointer;
-}
-#logo{
-	width:150px;
-	height:150px;
 }

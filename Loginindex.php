@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>
-			Login The Jammer
+			Miramar
 		</title>
 		<meta charset="UTF-8" />
 		<link href="CSS/style.css" rel="stylesheet" type="text/css">
@@ -14,9 +14,9 @@
 	<div style="text-align: center;">
 		<span >
 			<h1>Restaurant Store Application</h1>
-			<br/>
-			<img id="logo" src="images/default.png"/>
-			<p>*Slogan*</p>
+			<div class = "images">
+				<img id="logo" src="images/miramar.png"/>
+			</div>
 		</span>
 	</div>
 
@@ -26,7 +26,7 @@
 			<li id="MenuPage"> Menu </li>
 			<li id="ContactPage"> Contact Restaurant </li>
 			<li id="LoginPage"> Login/Register </li>
-			<li> copyright</li>
+			<li> Copyright</li>
 			
 		</ul>
 		<div style="text-align: center;">
@@ -36,14 +36,18 @@
 				<input id="userName" class="formElement" type="text" value= <?php if (isset($_COOKIE["user"])){ echo $_COOKIE["user"];} else {echo "";} ?> />
 				<br/>
 				<span id="errorLabelUserName"> </span>
+				<br/>
+
 				<p>Password</p>
 				<input id="userPassword" class="formElement" type="password"/>
 				<br/>
 				<span id="errorLabelUserPass"> </span>
 				<p>
+				<br/>
 
 				<input id="RememberMe" type="checkbox" name="rememberme" value="1" />Remember Me</p>
-
+				<br/>
+				
 				<input id="LoginBtn" type="submit" value="Login"/>	
 				<input id="RegistrationBtn" type="submit" value="Register"/>	
 			</fieldset>
