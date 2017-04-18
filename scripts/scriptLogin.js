@@ -36,7 +36,7 @@ $(document).ready(function(){
                 success : function(jsonResponse){
                 	alert(jsonResponse.message)
                     //alert("Welcome " +jsonResponse.fName + " " + jsonResponse.lName);
-                    window.location.replace("home.php");
+                    window.location.replace("PrivateHome.php");
                 },
                 error : function(errorMessage){
                 	alert("ERROR EN LLOGIN");

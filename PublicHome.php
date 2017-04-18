@@ -36,10 +36,10 @@
 		<h2>Home Page</h2>
 		<ul id="menu">
 			<li> Home Page</li>
-			<li id=""> Menu </li>
-			<li> About Restaurant </li>
-			<li id=""> Login </li>
-			<li> Registration </li>
+			<li id="MenuPage"> Menu </li>
+			<li id="ContactPage"> Contact Restaurant </li>
+			<li id="LoginPage"> Login </li>
+			<li id="RegistrationPage"> Registration </li>
 			<li> copyright</li>
 			
 		</ul>

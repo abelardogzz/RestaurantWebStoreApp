@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+    //Loads Additional Information to the web page
     var jsonToSend = {
                 "action" : "LOADHOME",
                 "username" : "abelardogzz"
@@ -47,7 +47,7 @@ $(document).ready(function(){
         $com.val($com.val().trim());
         if ($com.val() != "" ){
     		
-///ADD Comment to the tread
+      ///ADD Comment to the tread
             var jsonToSend = {
                 "action" : "COMMENTING",
                 "comment" : $com.val() 
@@ -83,13 +83,23 @@ $(document).ready(function(){
 
 	});
 
-    $("#ProfilePage").on("click",function(){
-        window.location.replace("profile.php");
-    });
-    $("#FriendsPage").on("click",function(){
-        window.location.replace("friends.php");
+    //Redirect to Login page
+    $("#LoginPage").on("click",function(){
+        window.location.replace("Loginindex.php");
     });
 
+    //Redirect to Contact/information about restautant page
+    $("#ContactPage").on("click",function(){
+        window.location.replace("Contact.php");
+    });
+
+    //Redirect to registration page
+    $("#RegistrationPage").on("click",function(){
+        window.location.replace("Registration.php");
+    });
+    
+
+/*
     $("#Logoutbtn").on("click",function(){
         var jsonToSend = {
                         "action" : "LOGOUT"
@@ -116,4 +126,8 @@ $(document).ready(function(){
 
         });
     });
+*/
+
+
+
 });
