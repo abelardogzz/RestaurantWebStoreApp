@@ -2,7 +2,7 @@
 		///User to test, alfredo08 pass:alfred90. everthing works
 		///With other users the comments wont post, needs refresh. i dont know why
 ?>
-
+ 
 <!DOCTYPE html>
 <html>
 	<head>
