@@ -1,7 +1,3 @@
-<?php
-		///User to test, alfredo08 pass:alfred90. everthing works
-		///With other users the comments wont post, needs refresh. i dont know why
-?>
  
 <!DOCTYPE html>
 <html>
@@ -17,9 +13,9 @@
 	<body>
 	<div style="text-align: center;">
 		<span >
-			<h1>The Jammer</h1>
+			<h1>Restaurant Store Application</h1>
 			<br/>
-			<img id="logo" src="images/jammer_logo.png"/>
+			<img id="logo" src="images/default.png"/>
 			<p>Connecting and sharing with people since 2017</p>
 		</span>
 	</div>
