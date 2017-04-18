@@ -33,7 +33,7 @@
 			</span>
 		</div>
 
-		<h2>Home Page</h2>
+		<h2>Contact</h2>
 		<ul id="menu">
 			<li> Home Page</li>
 			<li id="MenuPage"> Menu </li>
@@ -44,18 +44,21 @@
 		</ul>
 
 
-		<div id="PromotionsSpace">
-			<h1>PROMOTIONS SPACE</h1>
+		<div id="ContactSpace">
+			<h1>Restuarant Contact Information</h1>
+			<div  style="text-align: center;">
+				<p>
+					Name </br>
+					Address </br>
+					Telephone</br>
+					Service Hours</br>
+				</p>
+			</div>
 			<ul id="PromoList">
 				
 			</ul>
 		</div>
 
-		<div>
-			<h4>Add a comment</h4>
-			<input id="CommentBox" type="text"> </input>
-			<input id="AddCommbtn" type="submit" value="Add Comment"/>
-		</div>
 
 
 	</body>

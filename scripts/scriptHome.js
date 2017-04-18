@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+/*
     //Loads Additional Information to the web page
     var jsonToSend = {
                 "action" : "LOADHOME",
@@ -35,12 +35,12 @@ $(document).ready(function(){
                 console.log(errorMsg);
             }
     });
+*/
 
 
 
 
-
-
+    /*
 	$("#AddCommbtn").on("click",function(){
 
 		var $com = $("#CommentBox");
@@ -79,9 +79,8 @@ $(document).ready(function(){
              });
 
         }
-        
-
 	});
+    */
 
     //Redirect to Login page
     $("#LoginPage").on("click",function(){
@@ -93,10 +92,13 @@ $(document).ready(function(){
         window.location.replace("Contact.php");
     });
 
-    //Redirect to registration page
-    $("#RegistrationPage").on("click",function(){
-        window.location.replace("Registration.php");
+    //Redirect to Contact/information about restautant page
+    $("#RegistrationBtn").on("click",function(){
+        window.location.replace("registerIndex.php");
     });
+
+
+
     
 
 /*

@@ -5,6 +5,13 @@ body {
 	margin:  0;
 	padding: 0;
 }
+p{
+	font-family: Verdana, sand-serif;
+	font-size: 15px;
+	color: #4F545F;
+	margin:  0;
+	padding: 0;
+}
 
 h1{
 	background-color: #55B3C5;
@@ -116,4 +123,8 @@ ul#menu li:hover, ul#menu li.selected{
 	background-color: #999;
 	color: white;
 	cursor: pointer;
+}
+#logo{
+	width:150px;
+	height:150px;
 }

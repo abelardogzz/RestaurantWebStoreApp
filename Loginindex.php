@@ -21,7 +21,14 @@
 	</div>
 
 	<h1>Login</h1>
-		
+		<ul id="menu">
+			<li> Home Page</li>
+			<li id="MenuPage"> Menu </li>
+			<li id="ContactPage"> Contact Restaurant </li>
+			<li id="LoginPage"> Login/Register </li>
+			<li> copyright</li>
+			
+		</ul>
 		<div style="text-align: center;">
 			<fieldset>
 				
