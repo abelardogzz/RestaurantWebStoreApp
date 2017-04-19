@@ -10,7 +10,7 @@
 		unset($_SESSION["lName"]);
 		unset($_SESSION["Activity"]);
 		session_destroy();
-		//header("location: Loginindex.php");
+		//header("location: PublicHome.php");
 	}
 ?>
 
@@ -38,7 +38,7 @@
 			<li> Home Page</li>
 			<li id="MenuPage"> Menu </li>
 			<li id="ContactPage"> Contact Restaurant </li>
-			<li id="LoginPage"> Login/Register </li>
+			<li id="ProfilePage"> Profile </li>
 			
 		</ul>
 
