@@ -6,7 +6,7 @@ $(document).ready(function(){
         window.location.replace("Loginindex.php");
     });
 
-    //Redirect to Contact/information about restautant page
+    //Redirect to HOME PAGE about restautant page
     $("#HomePage").on("click",function(){
         window.location.replace("PublicHome.php");
     });
@@ -16,7 +16,21 @@ $(document).ready(function(){
         window.location.replace("MenuPage.php");
     });
 
+///Private Versions
+    //Redirect to HOME PAGE Private about restautant page
+    $("#PrivateHomePage").on("click",function(){
+        window.location.replace("PrivateHome.php");
+    });
 
+    //Redirect to MENU PAGE Private about restautant page
+    $("#PrivateMenuPage").on("click",function(){
+        window.location.replace("PrivateMenuPage.php");
+    });
+
+    //Redirect to Login page
+    $("#ProfilePage").on("click",function(){
+        window.location.replace("Profile.php");
+    });
 
 
 });

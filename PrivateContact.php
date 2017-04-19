@@ -21,7 +21,7 @@
 		<meta charset="UTF-8" />
 		<link href="CSS/style.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="scripts/jquery.js" ></script>
-		<script type="text/javascript" src="scripts/scriptHome.js" ></script>
+		<script type="text/javascript" src="scripts/scriptContact.js" ></script>
 	</head>
 	<body>
 		<div style="text-align: center;">
@@ -35,9 +35,9 @@
 
 		<h2>Contact</h2>
 		<ul id="menu">
-			<li> Home Page</li>
-			<li id="MenuPage"> Menu </li>
-			<li id="ContactPage"> Contact Restaurant </li>
+			<li id="PrivateHomePage"> Home Page</li>
+			<li id="PrivateMenuPage"> Menu </li>
+			<li id="PrivateContactPage"> Contact Restaurant </li>
 			<li id="ProfilePage"> Profile </li>
 			
 		</ul>
@@ -53,9 +53,7 @@
 					Service Hours</br>
 				</p>
 			</div>
-			<ul id="PromoList">
-				
-			</ul>
+			
 		</div>
 
 

@@ -10,7 +10,7 @@
 		unset($_SESSION["lName"]);
 		unset($_SESSION["Activity"]);
 		session_destroy();
-		//header("location: LoginIndex.php");
+		//header("location: Loginindex.php");
 	}
 ?>
 
@@ -21,7 +21,7 @@
 		<meta charset="UTF-8" />
 		<link href="CSS/style.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="scripts/jquery.js" ></script>
-		<script type="text/javascript" src="scripts/scriptHome.js" ></script>
+		<script type="text/javascript" src="scripts/scriptProfile.js" ></script>
 	</head>
 	<body>
 		<div style="text-align: center;">
@@ -33,9 +33,9 @@
 			</span>
 		</div>
 
-		<h2>Home Page</h2>
+		<h2> Profile </h2>
 		<ul id="menu">
-			<li> Home Page</li>
+			<li id="PrivateHomePage"> Home Page</li>
 			<li id="PrivateMenuPage"> Menu </li>
 			<li id="PrivateContactPage"> Contact Restaurant </li>
 			<li id="ProfilePage"> Profile </li>
@@ -43,13 +43,18 @@
 		</ul>
 
 
-		<div id="PromotionsSpace">
-			<h1>PROMOTIONS SPACE</h1>
-			<ul id="PromoList">
+		<div id="Profile">
+			<h1>User Profile Information</h1>
+			<div >
+				<p id="UserProfile">
+
+				</p>
+			</div>
+			<h1>User Orders Information</h1>
+			<ul id="OrdersHistory">
 				
 			</ul>
 		</div>
-
 
 
 

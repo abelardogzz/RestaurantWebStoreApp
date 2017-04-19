@@ -1,18 +1,4 @@
-<?php
-	session_start();
-	if (isset($_SESSION["Activity"]) && (time() - $_SESSION["Activity"] < 1800)){
-		$userfName = $_SESSION["fName"] ;
-		$userlName = $_SESSION["lName"] ;
-		//echo $userfName. $userlName;
-	}
-	else{
-		unset($_SESSION["fName"]);
-		unset($_SESSION["lName"]);
-		unset($_SESSION["Activity"]);
-		session_destroy();
-		//header("location: Loginindex.php");
-	}
-?>
+
 
 <!DOCTYPE html>
 <html>

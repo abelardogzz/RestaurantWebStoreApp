@@ -48,10 +48,25 @@ $(document).ready(function(){
     });
 
     //Redirects to Public Menu Page
-    $("#MenuPage").on("click",function(){
-        window.location.replace("MenuPage.php");
+    $("#ContactPage").on("click",function(){
+        window.location.replace("Contact.php");
     });
 
+///Private Versions
+    //Redirect to HOME PAGE Private about restautant page
+    $("#PrivateContactPage").on("click",function(){
+        window.location.replace("PrivateContact.php");
+    });
+
+    //Redirect to MENU PAGE Private about restautant page
+    $("#PrivateHomePage").on("click",function(){
+        window.location.replace("PrivateHome.php");
+    });
+
+    //Redirect to Login page
+    $("#ProfilePage").on("click",function(){
+        window.location.replace("Profile.php");
+    });
 
 
 

@@ -17,6 +17,22 @@ $(document).ready(function(){
     $("#MenuPage").on("click",function(){
         window.location.replace("MenuPage.php");
     });
+ 
+///Private Versions
+    //Redirect to HOME PAGE Private about restautant page
+    $("#PrivateContactPage").on("click",function(){
+        window.location.replace("PrivateContact.php");
+    });
+
+    //Redirect to MENU PAGE Private about restautant page
+    $("#PrivateMenuPage").on("click",function(){
+        window.location.replace("PrivateMenuPage.php");
+    });
+
+    //Redirect to Login page
+    $("#ProfilePage").on("click",function(){
+        window.location.replace("Profile.php");
+    });
 
     
 
