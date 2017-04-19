@@ -26,14 +26,15 @@
 			<li id="MenuPage"> Menu </li>
 			<li id="ContactPage"> Contact Restaurant </li>
 			<li id="LoginPage"> Login/Register </li>
-			<li> Copyright</li>
 			
 		</ul>
 		<div style="text-align: center;">
 			<fieldset>
 				
 				<p>Username</p>
-				<input id="userName" class="formElement" type="text" value= <?php if (isset($_COOKIE["user"])){ echo $_COOKIE["user"];} else {echo "";} ?> />
+				<input id="userName" class="formElement" type="text" value= 
+
+				/>
 				<br/>
 				<span id="errorLabelUserName"> </span>
 				<br/>

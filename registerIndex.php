@@ -18,8 +18,8 @@
 		<span>
 			<h1>The Jammer</h1>
 			<br/>
-			<img id="logo" src="images/jammer_logo.png"  />
-			<p>Connecting and sharing with people since 2017</p>
+			<img id="logo" src="images/default.png"  />
+			<p>Slogan**</p>
 		</span>
 	</div>
 	<h1>Register</h1>
@@ -50,35 +50,11 @@
 				<input id="userPasswordConfirmation" class="formElement" type="password"/>
 				<span id="errorLabelUserPassConfi"></span>
 				<br/>
-				<p>Country</p>
-				<select id="CountrySelect">
-					<option value="0"> Select a country... </option>
-					<option value="1"> Mexico </option>
-					<option value="2"> USA </option>
-                   	<option value="3"> Australia  </option>
-                  	<option value="4"> Egypt  </option>
-                  	<option value="5"> South Korea </option>
-                  	<option value="6">  Canada</option>
-                  	<option value="7"> Netherlands </option>
-                  	<option value="8"> Spain </option>
-                  	<option value="9"> France </option>
-                  	<option value="10"> Guatemala </option>
-                  	<option value="11"> Argentina </option>
-                  	<option value="12"> Italy  </option>
-                  	<option value="13"> Lithuania </option>
-                  	<option value="14"> Brazil </option>
-                  	<option value="15"> Colombia </option>
-                  
-				</select>
-				<span id="errorLabelCountry"></span>
-				<br/>
-				<p>Gender</p>
-				<input id="genderMasculine" type="radio" name="gender" value="M"/> Masculine
-				<br/>
-				<input id="genderFeminine" type="radio" name="gender" value="F"/> Feminine
-				<br/> 
-				<span id="errorLabelUserGender"></span>
-				<br/>
+				<p>Address</p>
+				<input id="addressBox" class="formElement" type="textbox"/>
+				<span id="errorLabelAddress"></span>
+				<br/><br/>
+				
 
 				<input id="RegistrationBtn" type="submit" value="Register"/>
 				<input id="CancelBtn" type="submit" value="Cancel"/>

@@ -39,7 +39,6 @@
 			<li id="MenuPage"> Menu </li>
 			<li id="ContactPage"> Contact Restaurant </li>
 			<li id="LoginPage"> Login/Register </li>
-			<li> copyright</li>
 			
 		</ul>
 
@@ -51,11 +50,7 @@
 			</ul>
 		</div>
 
-		<div>
-			<h4>Add a comment</h4>
-			<input id="CommentBox" type="text"> </input>
-			<input id="AddCommbtn" type="submit" value="Add Comment"/>
-		</div>
+
 
 
 	</body>
