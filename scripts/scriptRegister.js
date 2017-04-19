@@ -1,78 +1,83 @@
 $(document).ready(function(){
 
+	// Cancel Button
+	//--------------------------------------------------------------
 	$("#CancelBtn").on("click",function(){
 		window.location.replace("LoginIndex.php");
 	});
+	//--------------------------------------------------------------
 
+	// Register Button
+	//--------------------------------------------------------------
 	$("#RegistrationBtn").on("click",function(){
 		var logged = true;
 		var $userfirstname = $("#userFirstName");
+		var $userlastname = $("#userLastName");
+		var $username = $("#userName");
+		var $userEmail = $("#userEmail");
+		var $userPass = $("#userPassword");
+		var $userPassCon = $("#userPasswordConfirmation");
+		var $userAddress= $("#addressBox");
+
 		if($userfirstname.val() == ""){
-			$("#errorLabelUserFirstName").text("User First Name pls");
+			$("#errorLabelUserFirstName").text("First Name Missing");
 			logged = false;
 		}
 		else{
 			$("#errorLabelUserFirstName").text("");
 		}
-		var $userlastname = $("#userLastName");
+
 		if($userlastname.val() == ""){
-			$("#errorLabelUserLastName").text("User Last Name pls");
+			$("#errorLabelUserLastName").text("Last Name Missing");
 			logged = false;
 		}
 		else{
 			$("#errorLabelUserLastName").text("");
 		}
 
-		var $username = $("#userName");
 		if($username.val() == ""){
-			$("#errorLabelUserName").text("User Name pls"); 
+			$("#errorLabelUserName").text("Username Missing"); 
 			logged = false;
 		}
 		else{
 			$("#errorLabelUserName").text("");
 		}
 
-		var $userEmail = $("#userEmail");
 		if($userEmail.val() == ""){
-			$("#errorLabelUserEmail").text("Email pls");
+			$("#errorLabelUserEmail").text("Email Missing");
 			logged = false;
 		}
 		else{
 			$("#errorLabelUserEmail").text("");
 		}
 
-		var $userPass = $("#userPassword");
 		if($userPass.val() == ""){
-			$("#errorLabelUserPass").text("Password pls");
+			$("#errorLabelUserPass").text("Password Missing");
 			logged = false;
 		}
 		else{
 			$("#errorLabelUserPass").text("");
 		}
 
-		var $userPassCon = $("#userPasswordConfirmation");
 		if($userPass.val() != $userPassCon.val()){
-			$("#errorLabelUserPassConfi").text("password dont match");
+			$("#errorLabelUserPassConfi").text("Passwords don't match");
 			logged = false;
 		}
 		else if($userPassCon.val() == ""){
-			$("#errorLabelUserPassConfi").text("PassWord confirmation needed");
+			$("#errorLabelUserPassConfi").text("Please Confirm Password");
 			logged = false;
 		}
 		else{
 			$("#errorLabelUserPassConfi").text("");
 		}
 
-		var $userAddress= $("#addressBox");
 		if ($userAddress.val() == ""){
-			$("#errorLabelAddress").text("Address pls");
+			$("#errorLabelAddress").text("Address Missing");
 			logged = false;
 		}
 		else{
 			$("#errorLabelAddress").text("");	
 		}
-		
-
 		
 		if(logged){
 			//window.location.replace("home.html");
@@ -115,15 +120,5 @@ $(document).ready(function(){
 
 		}
 	});
-
-
-
-
-
-
-
-
-
-
-
+	//--------------------------------------------------------------
 });
