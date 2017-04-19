@@ -39,49 +39,6 @@ $(document).ready(function(){
 
 
 
-
-    /*
-	$("#AddCommbtn").on("click",function(){
-
-		var $com = $("#CommentBox");
-        $com.val($com.val().trim());
-        if ($com.val() != "" ){
-    		
-      ///ADD Comment to the tread
-            var jsonToSend = {
-                "action" : "COMMENTING",
-                "comment" : $com.val() 
-            };
-            //alert("POsting");
-            $.ajax({
-                url:"data/applicationLayer.php",
-                type: "POST", <!--GET|POST|PUT-->
-                data: jsonToSend,
-                dataType: "json",
-                contentType : "application/x-www-form-urlencoded",
-                success: function(data){
-                    if(data.message == "Session timeout"){
-                        alert("Session Expired");
-                        window.location.replace("Loginindex.php");
-                    }else{
-                        alert("comment posted");
-                        
-                        //alert(data.comment);
-                        $("#CommentList").append(data.comment);
-                    }
-                },
-                error: function(errorMsg){
-                    alert("ERROR IN PostComment or not?");
-                        //alert(errorMessage.responseText);
-                    alert(errorMsg.statusText);
-
-                }
-             });
-
-        }
-	});
-    */
-
     //Redirect to Login page
     $("#LoginPage").on("click",function(){
         window.location.replace("Loginindex.php");
