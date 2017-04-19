@@ -1,9 +1,12 @@
 $(document).ready(function(){
 
+    // Login Button
+    //--------------------------------------------------------------
 	$("#LoginBtn").on("click",function(){
 		var $username = $("#userName");
+
 		if($username.val() == ""){
-			$("#errorLabelUserName").text("UserName pls");
+			$("#errorLabelUserName").text("Username Missing");
 		}
 		else{
 			$("#errorLabelUserName").text("");
@@ -11,14 +14,15 @@ $(document).ready(function(){
 
 		var $userPass = $("#userPassword");
 		if($userPass.val() == ""){
-			$("#errorLabelUserPass").text("password pls");
+			$("#errorLabelUserPass").text("Password Missing");
 		}
 		else{
 			$("#errorLabelUserPass").text("");
 		}
 
 		if($username.val() != "" && $userPass.val() != ""){
-			//Variable spara enviar al servicio que se toman en POST
+
+            // Variable to send to the service taken in POST
 			var jsonToSend ={
 				"action" : "LOGIN",
                 "username" : $username.val(),
@@ -35,47 +39,42 @@ $(document).ready(function(){
 
                 success : function(jsonResponse){
                 	alert(jsonResponse.message)
-                    //alert("Welcome " +jsonResponse.fName + " " + jsonResponse.lName);
                     window.location.replace("PrivateHome.php");
                 },
                 error : function(errorMessage){
-                	alert("ERROR EN LLOGIN");
-                	
-                    alert(errorMessage.statusText);
-                   
+                	alert("LOGIN ERROR");
+                    alert(errorMessage.statusText);  
                 }
-
             });
-
-
 		}
-
 	});
+    //--------------------------------------------------------------
 
-
+    // Registration Button
+    //--------------------------------------------------------------
 	$("#RegistrationBtn").on("click",function(){
 		window.location.replace("registerIndex.php");
-
 	});
+    //--------------------------------------------------------------
 
-	//Redirect to Contact/information about restautant page
+	// Redirect to Contact/information about restaurant page
+    //--------------------------------------------------------------
     $("#HomePage").on("click",function(){
         window.location.replace("PublicHome.php");
     });
+    //--------------------------------------------------------------
 
-    //Redirects to Public Menu Page
+    // Redirects to Public Menu Page
+    //--------------------------------------------------------------
     $("#MenuPage").on("click",function(){
         window.location.replace("MenuPage.php");
     });
+    //--------------------------------------------------------------
 
-    //Redirect to Contact/information about restautant page
+    // Redirect to Contact/information about restautant page
+    //--------------------------------------------------------------
     $("#ContactPage").on("click",function(){
         window.location.replace("Contact.php");
     });
-
-
-
-
-
-
+    //--------------------------------------------------------------
 });
