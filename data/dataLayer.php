@@ -61,7 +61,7 @@
 		$conn = connectionToDataBase();
 		if($conn != null){
 			$sqlVerif = "SELECT * FROM Users WHERE username='$userName' ";
-			$sqlInsert = "INSERT INTO Users(fName, lName, username, passwrd, email, address)
+			$sqlInsert = "INSERT INTO Users(uFName, uLName, userName, uPassword, uEmail, uAddress)
 					VALUES  ('$FName', '$LName', '$userName', '$userPassword','$Email','$Address')";
 			//echo $sqlInsert;
 			//echo $sqlVerif;
@@ -171,9 +171,10 @@
 				// output data of each row
 			    while($row = $result->fetch_assoc()) 
 			    {
-			    	$response = array('Name' => $row['itemname'], 
-			    					'description' => $row['itemDescription'], 
-			    					'price' => $row['itemPrice']);   
+			    	//INSERT INTO Menu(mName, mDescription, mPrice)
+			    	$response = array('Name' => $row['mName'], 
+			    					'description' => $row['mDescription'], 
+			    					'price' => $row['mPrice']);   
 			    	array_push($plates, $response);
 			    	//echo ($response);
 				}
