@@ -113,7 +113,7 @@
 			return array("status" => "CONNECTION WITH DB WENT WRONG");
 		}
 	}
-
+/*
 	function attemptHomeService ($username){
 		$conn = connectionToDataBase();
 
@@ -151,6 +151,44 @@
 				return array("status" => "CONNECTION WITH DB WENT WRONG");
 			}	
 	}
+*/
+	function attemptMenuService(){
+		$conn = connectionToDataBase();
+
+		if ($conn != null){
+			
+			//$userPassword = $_POST['userPassword'];
+			
+			$conn ->set_charset('utf8mb4');
+
+			$sql = " SELECT * FROM Menu ";
+			$result = $conn->query($sql); 
+
+			//echo $result->num_rows;
+			if ($result->num_rows > 0)//Double check
+			{
+				$plates = array();
+				// output data of each row
+			    while($row = $result->fetch_assoc()) 
+			    {
+			    	$response = array('Name' => $row['itemname'], 
+			    					'description' => $row['itemDescription'], 
+			    					'price' => $row['itemPrice']);   
+			    	array_push($plates, $response);
+			    	//echo ($response);
+				}
+
+			    //echo json_encode($response);
+			    //echo json_encode($plates);
+			    $conn->close();
+			    return array("status" =>  "SUCCESS", "plates" => $plates);
+			}
+
+			}else{
+				$conn -> close();
+				return array("status" => "CONNECTION WITH DB WENT WRONG");
+			}		
+	}
 
 
 	function attemptProfileService($username){
@@ -161,7 +199,7 @@
 			//$userName = $_POST['username'];
 			//$userPassword = $_POST['userPassword'];
 			//PROFILE EXAMPLE 
-			$sql = " SELECT fName, lName, username,gender,email,country FROM Users WHERE username = '$username' ";
+			$sql = " SELECT fName, lName, username,email,address FROM Users WHERE username = '$username' ";
 			$result = $conn->query($sql); 
 
 			//echo $result->num_rows;
@@ -174,9 +212,8 @@
 			    	$response = array('fName' => $row['fName'],
 		    	 					'lName' => $row['lName'],
 		    	 					'username' => $row['username'], 
-		    	 					'gender' => $row['gender'], 
 		    	 					'email' => $row['email'], 
-		    	 					'country' => $row['country'] );   
+		    	 					'address' => $row['address'] );   
 			    	//array_push($comments, $response);
 			    	
 
@@ -195,18 +232,10 @@
 		    	//header('HTTP/1.1 406 User not found'); //Pre-Prepares a json file with mssg
 		        //die("Wrong credentials provided!"); 
 			}
-
-
-
 		}else{
 				$conn -> close();
 				return array("status" => "CONNECTION WITH DB WENT WRONG");
 		}
-
-
-
-
-
 	}
 
 
@@ -503,7 +532,7 @@
 				}
 
 			    //echo json_encode($response);
-			    //echo json_encode($comments);
+			    //echo json_encode($plates);
 			    $conn->close();
 			    return array("status" =>  "SUCCESS", "friendships" => $friends);
 			}

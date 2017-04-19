@@ -56,7 +56,9 @@
 			</ul>
 		</div>
 
-
+		<div>
+			<input id="Logoutbtn" type="submit" value="Logout"/>
+		</div>
 
 	</body>
 

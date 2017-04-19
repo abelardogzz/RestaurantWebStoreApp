@@ -12,10 +12,15 @@ switch($action){
 					break;
 	case "LOADHOME" : HomeService();
 					break;
+
+	case "LOADMENU" : MenuService();
+					break;
+
 	case "LOADPROFILE" : ProfileSerivce();
 					break;
 	case "LOGOUT" : LogoutService();
 					break;
+					
 	case "COMMENTING" : PostComment();
 					break;
 	case "SEARCHFRIEND" : SearchFriend();
@@ -76,7 +81,7 @@ function RegistrationFunction(){
 	}
 
 }
-
+/*
 function HomeService(){
 	$username = $_POST['username'];
 
@@ -93,7 +98,22 @@ function HomeService(){
 		header('HTTP/1.1 500' . $result["status"]);
 		die($result["status"]);
 	}
+}*/
+function MenuService(){
 
+	$result = attemptMenuService();
+
+	//$comentario = $result["comments"];
+
+
+	if ($result["status"] == "SUCCESS"){
+		echo json_encode($result["plates"]);
+		//echo json_encode(array($comentario));
+	}	
+	else{
+		header('HTTP/1.1 500' . $result["status"]);
+		die($result["status"]);
+	}
 }
 
 function ProfileSerivce(){

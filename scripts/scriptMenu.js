@@ -4,7 +4,6 @@ $(document).ready(function(){
     //Loads Additional Information to the web page
     var jsonToSend = {
                 "action" : "LOADMENU",
-                "username" : "abelardogzz"
         };
     $.ajax({
 
