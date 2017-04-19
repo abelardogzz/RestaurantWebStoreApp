@@ -24,9 +24,8 @@
 		<ul id="menu">
 			<li id="HomePage"> Home Page</li>
 			<li id="MenuPage"> Menu </li>
-			<li id="ContactPage"> Contact Restaurant </li>
-			<li id="LoginPage"> Login/Register </li>
-			
+			<li id="ContactPage"> Contact Us </li>
+			<li id="LoginPage"> Login/Registration </li>
 		</ul>
 		<div style="text-align: center;">
 			<fieldset>
@@ -46,7 +45,7 @@
 				<p>
 				<br/>
 
-				<input id="RememberMe" type="checkbox" name="rememberme" value="1" />Remember Me</p>
+				<input id="RememberMe" type="checkbox" name="rememberme" value="1"/>Remember Me</p>
 				<br/>
 				
 				<input id="LoginBtn" type="submit" value="Login"/>	
