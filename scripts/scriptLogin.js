@@ -58,7 +58,20 @@ $(document).ready(function(){
 
 	});
 
+	//Redirect to Contact/information about restautant page
+    $("#HomePage").on("click",function(){
+        window.location.replace("PublicHome.php");
+    });
 
+    //Redirects to Public Menu Page
+    $("#MenuPage").on("click",function(){
+        window.location.replace("MenuPage.php");
+    });
+
+    //Redirect to Contact/information about restautant page
+    $("#ContactPage").on("click",function(){
+        window.location.replace("Contact.php");
+    });
 
 
 
