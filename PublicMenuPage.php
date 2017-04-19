@@ -33,7 +33,7 @@
 			</span>
 		</div>
 
-		<h2>Contact</h2>
+		<h2>Menu</h2>
 		<ul id="menu">
 			<li id="HomePage"> Home Page</li>
 			<li id="MenuPage"> Menu </li>
@@ -43,15 +43,12 @@
 		</ul>
 
 
-		<div id="ContactSpace">
-			<h1>Restuarant Contact Information</h1>
-			<div  style="text-align: center;">
-				<p>
-					Name </br>
-					Address </br>
-					Telephone</br>
-					Service Hours</br>
-				</p>
+		<div id="MenuList">
+			<h1>Restuarant Food Options</h1>
+			<div >
+				<ul id="FoodOptions">
+
+				</ul>
 			</div>
 			
 		</div>
@@ -59,7 +56,4 @@
 
 
 	</body>
-
-	
-
 </html>

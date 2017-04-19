@@ -1,41 +1,5 @@
 $(document).ready(function(){
-/*
-    //Loads Additional Information to the web page
-    var jsonToSend = {
-                "action" : "LOADHOME",
-                "username" : "abelardogzz"
-        };
-    $.ajax({
 
-        
-            url:"data/applicationLayer.php",
-            type: "POST", <!--GET|POST|PUT-->
-            data: jsonToSend,
-            dataType: "json",
-            contentType : "application/x-www-form-urlencoded",
-            success: function(data){
-                var newhtml = "";
-
-                for (var x in data){
-                    newhtml += "<li>" 
-                                + data[x].fName + " " + data[x].lName + "<br/>"
-                                + "<b>User Name:</b> " + data[x].username +"<br/>" 
-                                + "Email: " + data[x].email  + "<br/>"
-                                + "Comment: " + data[x].comment
-                                + "</li>"
-                                ;
-                }
-
-                $("#CommentList").append(newhtml);
-            },
-            error: function(errorMsg){
-                alert("ERROR IN HOME");
-                    //alert(errorMessage.responseText);
-                alert(errorMsg.statusText);
-                console.log(errorMsg);
-            }
-    });
-*/
 
 
 
