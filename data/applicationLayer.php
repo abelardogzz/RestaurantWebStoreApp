@@ -20,9 +20,10 @@ switch($action){
 					break;
 	case "LOGOUT" : LogoutService();
 					break;
-					
-	case "COMMENTING" : PostComment();
-					break;
+
+	//case "COMMENTING" : PostComment();
+	//				break;
+
 	case "SEARCHFRIEND" : SearchFriend();
 					break;
 	case "SENDFRIENDREQUEST" : SendFriendRequest();
@@ -149,7 +150,7 @@ function LogoutService(){
 	}
 }
 
-
+/*
 function PostComment(){
 	session_start();
 	if (isset($_SESSION["Activity"]) && (time() - $_SESSION["Activity"] < 1800)){
@@ -177,6 +178,7 @@ function PostComment(){
 		die($result["status"]);
 	}
 }
+*/
 
 function SearchFriend(){
 	

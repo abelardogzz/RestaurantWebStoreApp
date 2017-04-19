@@ -250,7 +250,7 @@
 	}
 
 
-
+/*
 	function attemptPostComment($username,$fName,$lName,$email,$comment){
 		$conn = connectionToDataBase();
 
@@ -287,7 +287,7 @@
 			return array("status" => "CONNECTION WITH DB WENT WRONG");
 		}
 	}
-
+*/
 	function attemptFriendSearch($friend2find){
 		$conn = connectionToDataBase();
 
