@@ -21,6 +21,13 @@
 		</span>
 	</div>
 	<h1>Register</h1>
+		<ul id="menu">
+			<li id="HomePage"> Home Page</li>
+			<li id="MenuPage"> Menu </li>
+			<li id="ContactPage"> Contact Us </li>
+			<li id="LoginPage"> Login/Registration </li>
+			
+		</ul>
           
 		<div style="text-align: center;">          
 			<fieldset>

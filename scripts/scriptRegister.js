@@ -99,26 +99,39 @@ $(document).ready(function(){
                 contentType : "application/x-www-form-urlencoded", //Forces the content type to json
 
                 success : function(jsonResponse){
-                    alert("You are Registered!");
+                    alert("Registration Complete. Welcome!");
                     alert(jsonResponse.message);
-                    //alert(jsonResponse);
-                    //alert(jsonResponse.fName + " " + jsonResponse.lName);
                     window.location.replace("PrivateHome.php");
                 },
                 error : function(errorMessage){
-                    alert("ERROR ");
+                    alert("ERROR");
                     console.log(errorMessage);
                     //alert(errorMessage.responseText);
                     alert(errorMessage.statusText);
                 }
-
             });
-
-
-
-
-
 		}
 	});
 	//--------------------------------------------------------------
+
+	// Redirect to Contact/information about restaurant page
+    //--------------------------------------------------------------
+    $("#HomePage").on("click",function(){
+        window.location.replace("PublicHome.php");
+    });
+    //--------------------------------------------------------------
+
+    // Redirects to Public Menu Page
+    //--------------------------------------------------------------
+    $("#MenuPage").on("click",function(){
+        window.location.replace("MenuPage.php");
+    });
+    //--------------------------------------------------------------
+
+    // Redirect to Contact/information about restautant page
+    //--------------------------------------------------------------
+    $("#ContactPage").on("click",function(){
+        window.location.replace("Contact.php");
+    });
+    //--------------------------------------------------------------
 });
