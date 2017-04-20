@@ -363,7 +363,7 @@
 				    	$response = array('name' => $row['mName'],
 			    	 					'description' => $row['mDescription'], 
 			    	 					'price' => $row['mPrice'],
-			    	 					'status' => "FOUND";   
+			    	 					'status' => "FOUND");   
 				    	//array_push($comments, $response);
 					}
 				}
