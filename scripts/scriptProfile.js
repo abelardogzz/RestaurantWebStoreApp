@@ -100,7 +100,7 @@ var jsonToSend = {
 
                     for (var x in data){
                     newhtml += "<li>" 
-                                + "<b>Order Number:</b>" data[x].orderID +  "<br/>"
+                                + "<b>Order Number:</b>" +data[x].orderID +  "<br/>"
                                 + "<b>Total Price:</b> " + data[x].totalprice +"<br/>" 
                                 + "Plates Ordered: " + data[x].plates  + "<br/>"
                                + "</li>"

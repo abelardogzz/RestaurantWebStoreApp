@@ -56,7 +56,7 @@ function loginFunction(){
 		//No encryption defined
 		//$Password = decryptPassword($result["password"]);
 		$Password = $result["password"];
-  //echo $Password;
+ // echo $Password;
 		if ($userPassword === $Password) {
 			echo json_encode(array("message" => "Login Successful"));
 		}

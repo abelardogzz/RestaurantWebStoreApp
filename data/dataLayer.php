@@ -30,10 +30,10 @@
 				$row = $result->fetch_assoc();
 				$conn -> close();
 				session_start();
-				$_SESSION["fName"] = $row["fName"];
-				$_SESSION["lName"] = $row["lName"];
-				$_SESSION["user"]  = $row["username"];
-				$_SESSION["email"] = $row["email"];
+				$_SESSION["fName"] = $row["uFName"];
+				$_SESSION["lName"] = $row["uLName"];
+				$_SESSION["user"]  = $row["userName"];
+				$_SESSION["email"] = $row["uEmail"];
 
 				if($remember){
 					setcookie("user",$userName,time()+3600*24*30,"/","",0);
@@ -41,7 +41,7 @@
 
 				$_SESSION["Activity"] = time();
 				//return array("status" => "SUCCESS","passwrd" => );
-				return array("status" => "SUCCESS", "fName" => $row['fName'], "lName" => $row['lName'], "password" => $row['passwrd']);
+				return array("status" => "SUCCESS", "fName" => $row['uFName'], "lName" => $row['uLName'], "password" => $row['uPassword']);
 
 
 			}
@@ -200,7 +200,7 @@
 			//$userName = $_POST['username'];
 			//$userPassword = $_POST['userPassword'];
 			//PROFILE EXAMPLE 
-			$sql = " SELECT fName, lName, username,email,address FROM Users WHERE username = '$username' ";
+			$sql = " SELECT * FROM Users WHERE username = '$username' ";
 			$result = $conn->query($sql); 
 
 			//echo $result->num_rows;
@@ -210,11 +210,11 @@
 				// output data of each row
 			    while($row = $result->fetch_assoc()) 
 			    {
-			    	$response = array('fName' => $row['fName'],
-		    	 					'lName' => $row['lName'],
-		    	 					'username' => $row['username'], 
-		    	 					'email' => $row['email'], 
-		    	 					'address' => $row['address'] );   
+			    	$response = array('fName' => $row['uFName'],
+		    	 					'lName' => $row['uLName'],
+		    	 					'username' => $row['userName'], 
+		    	 					'email' => $row['uEmail'], 
+		    	 					'address' => $row['uAddress'] );   
 			    	//array_push($comments, $response);
 			    	
 
