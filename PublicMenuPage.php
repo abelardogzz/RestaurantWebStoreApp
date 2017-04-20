@@ -38,6 +38,20 @@
 			
 		</div>
 
+		<div id="MenuListSearch">
+			<h1>Search Food Options</h1>
+			<div >
+				<p> Plate Search : 
+					<input id="FoodSearchBox" type="text"> </input>
+					<input id="FoodSearchbtn" type="submit" value="Find"/>		
+				</p>
+				<ul id="SearchFoodOptions">
+
+				</ul>
+			</div>
+			
+		</div>
+
 
 
 	</body>
