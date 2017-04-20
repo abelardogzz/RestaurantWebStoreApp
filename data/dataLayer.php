@@ -289,14 +289,11 @@
 		}
 	}
 */
-	function attemptFriendSearch($friend2find){
+/*	function attemptFriendSearch($friend2find){
 		$conn = connectionToDataBase();
 
 		if($conn != null){
 			$conn ->set_charset('utf8mb4');
-			//$userName = $_POST['username'];
-			//$userPassword = $_POST['userPassword'];
-			//PROFILE EXAMPLE 
 			$sqlUsername = " SELECT fName, lName, username,gender,email,country FROM Users WHERE username = '$friend2find' ";
 			$sqlEmail = " SELECT fName, lName, username,gender,email,country FROM Users WHERE email = '$friend2find' ";
 			$result = $conn->query($sqlUsername); 
@@ -345,8 +342,48 @@
 			$conn -> close();
 			return array("status" => "CONNECTION WITH DB WENT WRONG");
 		}
-	}
+	}*/
 
+	function attemptFoodSearch($food2find){
+		$conn = connectionToDataBase();
+
+		if($conn != null){
+			$conn ->set_charset('utf8mb4');
+			$sqlPlate = " SELECT mName, mDescription, mPrice FROM Menu WHERE mName = '$food2find' ";
+			
+			$result = $conn->query($sqlPlate); 
+
+			//echo $result->num_rows;
+			if ($result->num_rows > 0 )//Double check
+			{
+				if ($result->num_rows > 0){
+					// output data of each row
+				    while($row = $result->fetch_assoc()) //CICLO POSIBLEMENTE INNECESARIO JEJEJE
+				    {
+				    	$response = array('name' => $row['mName'],
+			    	 					'description' => $row['mDescription'], 
+			    	 					'price' => $row['mPrice'],
+			    	 					'status' => "FOUND";   
+				    	//array_push($comments, $response);
+					}
+				}
+			    $conn-> close();
+			    return array("status" => "SUCCESS","food" => $response);
+
+			    //echo json_encode($result->fetch_assoc());
+			}
+			else
+			{
+				$conn -> close();
+				return array("status" => "PLATE NOT FOUND");
+			}
+
+		}
+		else{
+			$conn -> close();
+			return array("status" => "CONNECTION WITH DB WENT WRONG");
+		}
+	}
 
 	function attemptNewFriendRequest($username,$newfriend){
 		$conn = connectionToDataBase();

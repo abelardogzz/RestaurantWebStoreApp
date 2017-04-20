@@ -26,6 +26,9 @@ switch($action){
 
 	case "SEARCHFRIEND" : SearchFriend();
 					break;
+	case "SEARCHFOOD" : SearchFood();
+					break;
+
 	case "SENDFRIENDREQUEST" : SendFriendRequest();
 					break;
 	case "LOADFRIENDREQUESTS" : LoadFriendRequests();
@@ -179,7 +182,7 @@ function PostComment(){
 	}
 }
 */
-
+/*
 function SearchFriend(){
 	
 	
@@ -192,6 +195,25 @@ function SearchFriend(){
 	if ($result["status"] == "SUCCESS"){
 
 		echo json_encode($result["friend"]);
+	}	
+	else{
+		header('HTTP/1.1 500' . $result["status"]);
+		die($result["status"]);
+	}
+}*/
+function SearchFood(){
+	$food2find = $_POST["food"];
+
+
+	$result = attemptFoodSearch($food2find);
+
+
+	if ($result["status"] == "SUCCESS"){
+
+		echo json_encode($result["food"]);
+	}
+	elseif ($result["status"] == "PLATE NOT FOUND") {
+		echo json_encode($result);
 	}	
 	else{
 		header('HTTP/1.1 500' . $result["status"]);
