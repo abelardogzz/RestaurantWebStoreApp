@@ -10,8 +10,8 @@ switch($action){
 					break;
 	case "REGISTER" : RegistrationFunction();
 					break;
-	case "LOADHOME" : HomeService();
-					break;
+	//case "LOADHOME" : HomeService();
+	//				break;
 
 	case "LOADMENU" : MenuService();
 					break;
@@ -24,11 +24,11 @@ switch($action){
 	//case "COMMENTING" : PostComment();
 	//				break;
 
-	case "SEARCHFRIEND" : SearchFriend();
-					break;
+	//case "SEARCHFRIEND" : SearchFriend();
+	//				break;
 	case "SEARCHFOOD" : SearchFood();
 					break;
-
+/*
 	case "SENDFRIENDREQUEST" : SendFriendRequest();
 					break;
 	case "LOADFRIENDREQUESTS" : LoadFriendRequests();
@@ -39,7 +39,7 @@ switch($action){
 					break;
 	case "LOADFRIENDLIST" : LoadFriendList();
 					break;
-
+*/
 	case "LOADUSERORDERS" : LoadUserOrders();
 					break;
 	case "PLACEORDER" : PlaceOrder();
@@ -69,8 +69,6 @@ function loginFunction(){
 		die($result["status"]);
 	}	
 }
-
-
 
 function RegistrationFunction(){
 	$FName = $_POST['firstName'];
@@ -230,86 +228,87 @@ function SearchFood(){
 	}
 }
 
-function SendFriendRequest(){
+/*
+	function SendFriendRequest(){
 
-	session_start();
-	
-	$username = $_SESSION["user"];
-	$newfriend = $_POST["newfriend"];
+		session_start();
+		
+		$username = $_SESSION["user"];
+		$newfriend = $_POST["newfriend"];
 
-	$result = attemptNewFriendRequest($username,$newfriend);
+		$result = attemptNewFriendRequest($username,$newfriend);
 
-	if ($result["status"] == "SUCCESS"){
+		if ($result["status"] == "SUCCESS"){
 
-		echo json_encode(array("message" => "Request Sent"));
-	}	
-	else{
-		header('HTTP/1.1 500' . $result["status"]);
-		die($result["status"]);
+			echo json_encode(array("message" => "Request Sent"));
+		}	
+		else{
+			header('HTTP/1.1 500' . $result["status"]);
+			die($result["status"]);
+		}
+
+
 	}
 
+	function LoadFriendRequests(){
 
-}
+		session_start();
+		
+		$username = $_SESSION["user"];
+		$result = attemptLoadFriendRequests($username);
 
-function LoadFriendRequests(){
+		if ($result["status"] == "SUCCESS"){
 
-	session_start();
-	
-	$username = $_SESSION["user"];
-	$result = attemptLoadFriendRequests($username);
-
-	if ($result["status"] == "SUCCESS"){
-
-		echo json_encode($result["friend"]);
-	}
-	elseif ($result["status"] == "REQUEST NOT FOUND") {
-			echo json_encode(array("message" => "No Request Found"));
-	}	
-	else{
-		header('HTTP/1.1 500' . $result["status"]);
-		die($result["status"]);
-	}
-}
-
-function AcceptFriendRequest(){
-	session_start();
-	
-	$username = $_SESSION["user"];
-	$newfriend = $_POST["newfriend"];
-
-	$result = attmptAcceptFriendRequest($username,$newfriend);
-
-	if ($result["status"] == "SUCCESS"){
-
-		echo json_encode(array("message" => "Request ACCEPTED"));
-	}	
-	else{
-		header('HTTP/1.1 500' . $result["status"]);
-		die($result["status"]);
+			echo json_encode($result["friend"]);
+		}
+		elseif ($result["status"] == "REQUEST NOT FOUND") {
+				echo json_encode(array("message" => "No Request Found"));
+		}	
+		else{
+			header('HTTP/1.1 500' . $result["status"]);
+			die($result["status"]);
+		}
 	}
 
+	function AcceptFriendRequest(){
+		session_start();
+		
+		$username = $_SESSION["user"];
+		$newfriend = $_POST["newfriend"];
 
-}
+		$result = attmptAcceptFriendRequest($username,$newfriend);
 
-function RejectFriendRequest(){
-	session_start();
-	
-	$username = $_SESSION["user"];
-	$newfriend = $_POST["newfriend"];
+		if ($result["status"] == "SUCCESS"){
 
-	$result = attmptRejectFriendRequest($username,$newfriend);
+			echo json_encode(array("message" => "Request ACCEPTED"));
+		}	
+		else{
+			header('HTTP/1.1 500' . $result["status"]);
+			die($result["status"]);
+		}
 
-	if ($result["status"] == "SUCCESS"){
 
-		echo json_encode(array("message" => "Request REJECTED"));
-	}	
-	else{
-		header('HTTP/1.1 500' . $result["status"]);
-		die($result["status"]);
 	}
-}
 
-function LoadFriendList(){
+	function RejectFriendRequest(){
+		session_start();
+		
+		$username = $_SESSION["user"];
+		$newfriend = $_POST["newfriend"];
+
+		$result = attmptRejectFriendRequest($username,$newfriend);
+
+		if ($result["status"] == "SUCCESS"){
+
+			echo json_encode(array("message" => "Request REJECTED"));
+		}	
+		else{
+			header('HTTP/1.1 500' . $result["status"]);
+			die($result["status"]);
+		}
+	}
+
+	function LoadFriendList(){
 	session_start();
 	
 	$username = $_SESSION["user"];
@@ -324,7 +323,7 @@ function LoadFriendList(){
 		header('HTTP/1.1 500' . $result["status"]);
 		die($result["status"]);
 	}
-
+*/
 }
 
 function LoadUserOrders(){

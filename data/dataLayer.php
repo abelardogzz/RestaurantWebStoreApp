@@ -384,7 +384,7 @@
 			return array("status" => "CONNECTION WITH DB WENT WRONG");
 		}
 	}
-
+/*
 	function attemptNewFriendRequest($username,$newfriend){
 		$conn = connectionToDataBase();
 
@@ -471,10 +471,7 @@
 		$conn = connectionToDataBase();
 
 		if($conn != null){
-			/*$sqlInsert = "INSERT INTO Friends(username, friend,request, friendship)
-					VALUES  ('$username', '$newfriend',FALSE,TRUE),
-							('$newfriend', '$username',TRUE,FALSE)";
-			*/
+			
 			$sqlAcceptRequest = "UPDATE Friends SET friendship = TRUE 
 						WHERE username = '$username' AND friend = '$newfriend'";
 			$sqlUpdateRequest = "UPDATE Friends SET request = FALSE 
@@ -508,10 +505,7 @@
 		$conn = connectionToDataBase();
 
 		if($conn != null){
-			/*$sqlInsert = "INSERT INTO Friends(username, friend,request, friendship)
-					VALUES  ('$username', '$newfriend',FALSE,TRUE),
-							('$newfriend', '$username',TRUE,FALSE)";
-			*/
+			
 			$sqlRejectRequest = "DELETE FROM Friends 
 						WHERE username = '$username' AND friend = '$newfriend' " ;
 			$sqlDeleteRequest = "DELETE FROM Friends 
@@ -579,6 +573,7 @@
 			return array("status" => "CONNECTION WITH DB WENT WRONG");
 		}
 	}
+*/
 
 	function attemptLoadUserOrders($username){
 		$conn = connectionToDataBase();

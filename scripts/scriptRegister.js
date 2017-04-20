@@ -100,7 +100,7 @@ $(document).ready(function(){
 
                 success : function(jsonResponse){
                     alert("Registration Complete. Welcome!");
-                    alert(jsonResponse.message);
+                    //alert(jsonResponse.message);
                     window.location.replace("PrivateHome.php");
                 },
                 error : function(errorMessage){

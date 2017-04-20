@@ -171,10 +171,10 @@ var lastItem;
 var TotalPrice = 0;
 var ItemsInOrder = [];
     $("#SearchFoodOptions").on("click","#AddToOrderbtn",function(){
-        alert(lastItem.name);
+        //alert(lastItem.name);
         ItemsInOrder.push(lastItem); //Add item to the list of plates
 
-        alert(ItemsInOrder);
+       // alert(ItemsInOrder);
         console.log(ItemsInOrder);
          var newhtml ="";
                         newhtml += "<li>" +
@@ -183,7 +183,7 @@ var ItemsInOrder = [];
                         newhtml += "</li>";
         $("#OrderItems").append(newhtml);        
         TotalPrice += parseInt(lastItem.price);
-        alert(TotalPrice);
+        //alert(TotalPrice);
     });
 
     
