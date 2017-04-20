@@ -81,6 +81,45 @@ var jsonToSend = {
 
         });
     });
+
+
+    $("#LoadOrdersHistorybtn").on("click",function(){
+            var jsonToSend = {
+                            "action" : "LOADUSERORDERS"
+                        };
+            $.ajax({
+                
+
+                url:"data/applicationLayer.php",
+                type: "POST", <!--GET|POST|PUT-->
+                data: jsonToSend,
+                dataType: "json",
+                contentType : "application/x-www-form-urlencoded",
+                success: function(data){
+                    var newhtml = "";
+
+                    for (var x in data){
+                    newhtml += "<li>" 
+                                + "<b>Order Number:</b>" data[x].orderID +  "<br/>"
+                                + "<b>Total Price:</b> " + data[x].totalprice +"<br/>" 
+                                + "Plates Ordered: " + data[x].plates  + "<br/>"
+                               + "</li>"
+                                ;
+                    }
+                    $("#OrdersHistory").append(newhtml);
+                },
+                error: function(errorMsg){
+                    alert("ERROR IN LOGOUT");
+                        //alert(errorMessage.responseText);
+                    alert(errorMsg.statusText);
+                    console.log(errorMsg);
+                }
+
+
+            });
+    });
+
+
    
 
 

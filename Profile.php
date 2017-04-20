@@ -50,11 +50,16 @@
 
 				</p>
 			</div>
-			<h1>User Orders Information</h1>
-			<ul id="OrdersHistory">
-				
-			</ul>
+			
+
 		</div>
+		<div >
+			<h1>User Orders Information</h1>
+					<input id="LoadOrdersHistorybtn" type="submit" value="Load Orders History"/>		
+				<ul id="OrdersHistory">
+
+				</ul>
+			</div>
 
 		<div>
 			<input id="Logoutbtn" type="submit" value="Logout"/>

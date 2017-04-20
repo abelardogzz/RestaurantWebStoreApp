@@ -580,4 +580,50 @@
 		}
 	}
 
+	function attemptLoadUserOrders($username){
+		$conn = connectionToDataBase();
+
+		if ($conn != null){
+			
+			//$userPassword = $_POST['userPassword'];
+			
+			$conn ->set_charset('utf8mb4');
+
+			$sql = " SELECT orderID, oTotalPrice, GROUP_CONCAT(oiMenuItem) as items
+						FROM orders JOIN orderitems 
+						WHERE oUserName = '$username' AND oiID = orderID GROUP BY orderID ";
+			//echo $sql;
+			$result = $conn->query($sql); 
+
+			//echo $result->num_rows;
+			if ($result->num_rows > 0)//Double check
+			{
+				$orders = array();
+				// output data of each row
+			    while($row = $result->fetch_assoc()) 
+			    {
+			    	//$response = array('fName' => $row['fname'], 'lName' => $row['lname'], 'username' => $row['username'], 'comment' => $row['comment'], 'email' => $row['email']);  
+			    	//$response = array('userFriend' => $row['friend']);
+			    	$response = array('orderID' => $row['orderID'],
+			    						'totalprice'=> $row['oTotalPrice'],
+			    						'plates' => $row['items']);
+			    	array_push($orders, $response);
+			    	//echo ($response);
+				}
+
+			    //echo json_encode($response);
+			    //echo json_encode($plates);
+			    $conn->close();
+			    return array("status" =>  "SUCCESS", "orders" => $orders);
+			}
+		}else{
+			$conn -> close();
+			return array("status" => "CONNECTION WITH DB WENT WRONG");
+		}
+	}
+
+
+
+
+
 ?>

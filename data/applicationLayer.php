@@ -40,6 +40,9 @@ switch($action){
 	case "LOADFRIENDLIST" : LoadFriendList();
 					break;
 
+	case "LOADUSERORDERS" : LoadUserOrders();
+					break;
+
 }
 
 function loginFunction(){
@@ -318,6 +321,24 @@ function LoadFriendList(){
 
 }
 
+function LoadUserOrders(){
+	session_start();
+	
+	$username = $_SESSION["user"];
+
+	$result = attemptLoadUserOrders($username);
+
+	if ($result["status"] == "SUCCESS"){
+
+		echo json_encode($result["orders"]);
+	}	
+	else{
+		header('HTTP/1.1 500' . $result["status"]);
+		die($result["status"]);
+	}	
+}
+
+
 # Action to encrypt the password of the user
 function encryptPassword()
 {
@@ -368,5 +389,8 @@ function decryptPassword($password)
 
     return $password;
 }
+
+
+
 
 ?>
