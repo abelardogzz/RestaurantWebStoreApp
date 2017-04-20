@@ -33,7 +33,7 @@
 				$_SESSION["fName"] = $row["uFName"];
 				$_SESSION["lName"] = $row["uLName"];
 				$_SESSION["user"]  = $row["userName"];
-				$_SESSION["email"] = $row["uEmail"];
+				$_SESSION["address"] = $row["uAddress"];
 
 				if($remember){
 					setcookie("user",$userName,time()+3600*24*30,"/","",0);
@@ -87,7 +87,7 @@
 					$_SESSION["fName"] = $FName;
 					$_SESSION["lName"] = $LName;
 					$_SESSION["user"]  = $username;
-					$_SESSION["email"] = $Email;
+					$_SESSION["address"] = $Address;
 
 					if($remember){
 						setcookie("user",$userName,time()+3600*24*30,"/","",0);
