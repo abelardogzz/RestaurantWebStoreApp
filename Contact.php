@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -23,7 +21,7 @@
 		<ul id="menu">
 			<li id="HomePage"> Home Page</li>
 			<li id="MenuPage"> Menu </li>
-			<li id="LoginPage"> Login/Register </li>
+			<li id="LoginPage"> Login/Registration </li>
 			
 		</ul>
 
@@ -49,13 +47,6 @@
 					</br>
 				</p>
 			</div>
-			
 		</div>
-
-
-
 	</body>
-
-	
-
 </html>
