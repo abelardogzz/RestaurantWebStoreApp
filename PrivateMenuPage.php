@@ -71,6 +71,7 @@
 				<ul id="OrderItems">
 
 				</ul>
+				<input id="CompleteOrderbtn" type="submit" value="Complete Order"/>
 			</div>
 			
 		</div>
