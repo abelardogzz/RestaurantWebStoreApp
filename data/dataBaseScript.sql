@@ -21,7 +21,7 @@ CREATE TABLE Orders (
 	oUserName VARCHAR(15) NOT NULL REFERENCES Users(userName),
 	oTotalPrice INT NOT NULL,
 	oAddress VARCHAR(70) NOT NULL REFERENCES Users(uAddress),
-	oToGo BOOLEAN NOT NULL,
+	oToGo BOOLEAN NOT NULL
 );
 
 CREATE TABLE OrderItems (
