@@ -15,13 +15,13 @@ var jsonToSend = {
                 console.log(jsonData);
                 
                     var newhtml ="";
-                    newhtml += " <b>Name:</b> "+ jsonData.fName + " "+
-                                 jsonData.lName + "</br> "+
-                                " <b>User Name:</b> " + jsonData.username + "</br> "+
-                                " <b>Email:</b> " +jsonData.email + "</br> ";
+                    newhtml += " <b><h3><i>Name:</i></h3></b> "+ jsonData.fName + " "+
+                                 jsonData.lName + "</br><br/> "+
+                                " <b><h3><i>Username:</i></h3></b> " + jsonData.username + "</br><br/> "+
+                                " <b><h3><i>Email:</i></h3></b> " +jsonData.email + "</br><br/> ";
                     
 
-                    newhtml+= "<b>Address:</b>" + jsonData.address ;
+                    newhtml+= "<b><h3><i>Address:</i></h3></b>" + jsonData.address + "<br/>" ;
 
                     $("#UserProfile").append(newhtml);
                 
