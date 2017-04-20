@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Welcome</title>
+		<title>Miramar Home</title>
 		<meta charset="UTF-8" />
 		<link href="CSS/style.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="scripts/jquery.js" ></script>
@@ -12,24 +12,23 @@
 		<div style="text-align: center;">
 			<span >
 				<h1>Restaurant Store Application</h1>
-				<br/>
-				<img id="logo" src="images/default.png"/>
-				<p><i>"Restaurant Slogan"</i></p>
+				<div class = "images">
+					<img id="logo" src="images/miramar.png"/>
+				</div>
 			</span>
 		</div>
 
-		<h2>Home Page</h2>
+		<h1>Home Page</h1>
 		<ul id="menu">
-			<li> Home Page</li>
 			<li id="MenuPage"> Menu </li>
-			<li id="ContactPage"> Contact Restaurant </li>
-			<li id="LoginPage"> Login/Register </li>
+			<li id="ContactPage"> Contact Us </li>
+			<li id="LoginPage"> Login/Registration </li>
 			
 		</ul>
 
 
 		<div id="PromotionsSpace">
-			<h1>PROMOTIONS SPACE</h1>
+			<h2>PROMOTIONS SPACE</h2>
 			<ul id="PromoList">
 				
 			</ul>
