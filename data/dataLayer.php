@@ -628,19 +628,22 @@
 		if ($conn != null){
 			$conn ->set_charset('utf8mb4');
 
-			$sqlLast = "SELECT orderID FROM Orders ORDER BY orderID DESC LIMIT 1 ";
-			//Get the last order number for managment
-			$result = $conn->query($sqlLast); 
-			$row = $result->fetch_assoc();
-			$OrderNumber = $row['orderID'] + 1;
+			
 
 			//Insert of order
 			$sqlInsert = "INSERT INTO Orders(oUserName, oTotalPrice, oAddress, oToGo) 
 						  VALUES  ('$username', '$totalpayment', '$address', TRUE)";
 			if (mysqli_query($conn,$sqlInsert)){
+				$sqlLast = "SELECT orderID FROM Orders ORDER BY orderID DESC LIMIT 1 ";
+				//Get the last order number for managment
+				$result = $conn->query($sqlLast); 
+				$row = $result->fetch_assoc();
+				$OrderNumber = $row['orderID'];
+				$names = array_map(create_function('$o', 'return $o->id;'), $plates);
 				for ($i=0; $i < count($plates); $i++) {
+					$obj = $plates[$i]['name'];
 					$sqlInsert = "INSERT INTO OrderItems(oiID, oiMenuItem) 
-									VALUES ('$OrderNumber', '$plates[$i].name')";
+									VALUES ('$OrderNumber', '$obj')";
 					mysqli_query($conn,$sqlInsert);					
 				}
 			}

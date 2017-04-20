@@ -351,13 +351,13 @@ function PlaceOrder(){
 	$address = $_SESSION["address"];
 	$totalpayment = $_POST["totalpayment"];
 	$plates = $_POST["plates"];
-	//echo count($plates);
+	//echo $plates;
 
 	$result = attemptPlaceOrder($username,$address,$totalpayment,$plates);
 
 	if ($result["status"] == "SUCCESS"){
 
-		echo json_encode($result["orders"]);
+		echo json_encode("done");
 	}	
 	else{
 		header('HTTP/1.1 500' . $result["status"]);
