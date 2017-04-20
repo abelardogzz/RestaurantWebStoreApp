@@ -27,25 +27,24 @@
 		<div style="text-align: center;">
 			<span >
 				<h1>Restaurant Store Application</h1>
-				<br/>
-				<img id="logo" src="images/default.png"/>
-				<p><i>"Restaurant Slogan"</i></p>
+				<div class = "images">
+					<img id="logo" src="images/miramar.png"/>
+				</div>
 			</span>
 		</div>
 
-		<h2> Profile </h2>
+		<h1> Profile </h1>
 		<ul id="menu">
 			<li id="PrivateHomePage"> Home Page</li>
 			<li id="PrivateMenuPage"> Menu </li>
 			<li id="PrivateContactPage"> Contact Restaurant </li>
-			<li id="ProfilePage"> Profile </li>
 			
 		</ul>
 
 
 		<div id="Profile">
-			<h1>User Profile Information</h1>
-			<div >
+			<h2>User Profile Information</h2>
+			<div style="text-align: center;">
 				<p id="UserProfile">
 
 				</p>
@@ -54,7 +53,7 @@
 
 		</div>
 		<div >
-			<h1>User Orders Information</h1>
+			<h2>User Orders Information</h2>
 					<input id="LoadOrdersHistorybtn" type="submit" value="Load Orders History"/>		
 				<ul id="OrdersHistory">
 
