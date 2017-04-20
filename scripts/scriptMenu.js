@@ -16,12 +16,9 @@ $(document).ready(function(){
                var newhtml = "";
 
                 for (var x in data){
-                    newhtml += "<li>" 
-                                + data[x].Name +  "<br/>"
-                                + "<b>Description:</b> " + data[x].description +"<br/>" 
-                                + "Price: " + data[x].price  + "<br/>"
-                               + "</li>"
-                                ;
+                    newhtml += "<li> <a href=\"#\"> <img src=\"images/" + x + ".jpg\"/>"
+                                + "<span class=\"imageText\"><span>" + data[x].Name + "<br/> $" + data[x].price + "</span></span>"
+                               + "</a></li>";
                 }
 
                 $("#FoodOptions").append(newhtml);
