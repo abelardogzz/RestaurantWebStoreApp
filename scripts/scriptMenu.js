@@ -120,6 +120,7 @@ $(document).ready(function(){
         });
     });
 
+var lastItem;
 
     $("#PrivateFoodSearchbtn").on("click",function(){
         var jsonToSend = {
@@ -137,8 +138,10 @@ $(document).ready(function(){
                 /*On success, it returns an array of objects*/
                 if (jsonData.status != "PLATE NOT FOUND"){
                     alert("LOOK AT that PLATE!!");
-                    console.log(jsonData);
-                    
+                    $("#SearchFoodOptions").empty();
+
+                    lastItem = jsonData;
+                    console.log(lastItem);
                         var newhtml ="";
                         newhtml += "<li>" +
                                     " <b>Name:</b> "+ jsonData.name + " "+
@@ -166,8 +169,18 @@ $(document).ready(function(){
         });
     });
 
-
-
+var TotalPrice = 0;
+    $("#SearchFoodOptions").on("click","#AddToOrderbtn",function(){
+        alert(lastItem.name);
+         var newhtml ="";
+                        newhtml += "<li>" +
+                                    " <b>Name:</b> "+ lastItem.name + " "+
+                                    " <b>Price:</b> " +lastItem.price + "</br> ";
+                        newhtml += "</li>";
+        $("#OrderItems").append(newhtml);        
+        TotalPrice += parseInt(lastItem.price);
+        alert(TotalPrice);
+    });
 
 
 
