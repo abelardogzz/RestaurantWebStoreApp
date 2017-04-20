@@ -101,9 +101,6 @@ $(document).ready(function(){
                                     " <b>Name:</b> "+ jsonData.name + " "+
                                     " <b>Description:</b> " + jsonData.description + "</br> "+
                                     " <b>Price:</b> " +jsonData.price + "</br> ";
-                        
-
-                        newhtml+= "<b>Address:</b>" + jsonData.address + "</br>";
                         // DONT ADD a BTN FOR THE REQuEST FUNCTIONALITY
                         //newhtml += "<input id=\"AddToOrderbtn\" type=\"submit\" value=\"Add to Order\"/>";
                         //newhtml += "<input type=\"hidden\" id=\"userFood\" value=" +jsonData.name +"> ";
@@ -150,9 +147,6 @@ $(document).ready(function(){
                                     " <b>Name:</b> "+ jsonData.name + " "+
                                     " <b>Description:</b> " + jsonData.description + "</br> "+
                                     " <b>Price:</b> " +jsonData.price + "</br> ";
-                        
-
-                        newhtml+= "<b>Address:</b>" + jsonData.address + "</br>";
                         //ADD a BTN FOR THE REQuEST FUNCTIONALITY
                         newhtml += "<input id=\"AddToOrderbtn\" type=\"submit\" value=\"Add to Order\"/>";
                         newhtml += "<input type=\"hidden\" id=\"userFood\" value=" +jsonData.name +"> ";
