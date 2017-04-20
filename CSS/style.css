@@ -142,29 +142,44 @@ ul#menu li:hover, ul#menu li.selected{
 	cursor: pointer;
 }
 
-div#menuList {
-  width: 900px;
-  margin: 0 auto;
-  overflow: auto;
+ul#FoodOptions {
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	text-align: center;
 }
 
-ul#FoodOptions {
-  list-style-type: none;
+ul#FoodOptions li {
+	display: inline-block;
+  	height: 150px;
+  	margin: 0 1em 1em 0;
+  	position: relative;
+  	width: 150px;
 }
- 
-li img {
-  float: left;
-  margin: 10px;
-  border: 5px solid #fff;
- 
-  -webkit-transition: box-shadow 0.5s ease;
-  -moz-transition: box-shadow 0.5s ease;
-  -o-transition: box-shadow 0.5s ease;
-  -ms-transition: box-shadow 0.5s ease;
-  transition: box-shadow 0.5s ease;
+
+span.imageText {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
- 
-li img:hover {
-  -webkit-box-shadow: 0px 0px 7px rgba(255,255,255,0.9);
-  box-shadow: 0px 0px 7px rgba(255,255,255,0.9);
+
+span.imageText span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ul#FoodOptions li:hover span.imageText {
+  opacity: 1;
 }
