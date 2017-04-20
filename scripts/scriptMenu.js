@@ -164,14 +164,16 @@ var lastItem;
                     //alert(errorMessage.responseText);
                 alert(errMessage.statusText);
                 console.log(errMessage);
-                
             }
         });
     });
 
 var TotalPrice = 0;
+var ItemsInOrder;
     $("#SearchFoodOptions").on("click","#AddToOrderbtn",function(){
         alert(lastItem.name);
+        ItemsInOrder.push(lastItem); //Add item to the list of plates
+        alert(ItemsInOrder);
          var newhtml ="";
                         newhtml += "<li>" +
                                     " <b>Name:</b> "+ lastItem.name + " "+
@@ -182,7 +184,34 @@ var TotalPrice = 0;
         alert(TotalPrice);
     });
 
+    
+    $("#CompleteOrderbtn").on("click",function(){
+        var jsonToSend = {
+                "action" : "PLACEORDER",
+                "plates" : ItemsInOrder
+        };
 
+        $.ajax({
+            url:"data/applicationLayer.php",
+            type: "POST", <!--GET|POST|PUT-->
+            data: jsonToSend,
+            dataType: "json",
+            contentType : "application/x-www-form-urlencoded", /** Espesify bc default xml and it reads diferently*/
+            success: function(jsonData){
+                /*On success, it returns an array of objects*/
+                
+            },
+            error: function(errMessage){
+                alert("ERROR IN ORDER PLACEMENT");
+                    //alert(errorMessage.responseText);
+                alert(errMessage.statusText);
+                console.log(errMessage);
+            }
+        });
+
+
+
+    });
 
 
 });
