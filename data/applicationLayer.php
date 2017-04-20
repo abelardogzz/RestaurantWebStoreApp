@@ -351,13 +351,9 @@ function PlaceOrder(){
 	$address = $_SESSION["address"];
 	$totalpayment = $_POST["totalpayment"];
 	$plates = $_POST["plates"];
-	echo count($plates);
+	//echo count($plates);
 
 	$result = attemptPlaceOrder($username,$address,$totalpayment,$plates);
-	
-	for ($i=0; $i < count($plates); $i++) { 
-		
-	}
 
 	if ($result["status"] == "SUCCESS"){
 

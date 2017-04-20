@@ -628,29 +628,25 @@
 		if ($conn != null){
 			$conn ->set_charset('utf8mb4');
 
-			$sql = " ";
-			//echo $sql;
-			$result = $conn->query($sql); 
+			$sqlLast = "SELECT orderID FROM Orders ORDER BY orderID DESC LIMIT 1 ";
+			//Get the last order number for managment
+			$result = $conn->query($sqlLast); 
+			$row = $result->fetch_assoc();
+			$OrderNumber = $row['orderID'] + 1;
 
-			//echo $result->num_rows;
-			if ($result->num_rows > 0)//Double check
-			{
-				$orders = array();
-				// output data of each row
-			    while($row = $result->fetch_assoc()) 
-			    {
-			    	$response = array('orderID' => $row['orderID'],
-			    						'totalprice'=> $row['oTotalPrice'],
-			    						'plates' => $row['items']);
-			    	array_push($orders, $response);
-			    	//echo ($response);
+			//Insert of order
+			$sqlInsert = "INSERT INTO Orders(oUserName, oTotalPrice, oAddress, oToGo) 
+						  VALUES  ('$username', '$totalpayment', '$address', TRUE)";
+			if (mysqli_query($conn,$sqlInsert)){
+				for ($i=0; $i < count($plates); $i++) {
+					$sqlInsert = "INSERT INTO OrderItems(oiID, oiMenuItem) 
+									VALUES ('$OrderNumber', '$plates[$i].name')";
+					mysqli_query($conn,$sqlInsert);					
 				}
-
-			    //echo json_encode($response);
-			    //echo json_encode($plates);
-			    $conn->close();
-			    return array("status" =>  "SUCCESS", "orders" => $orders);
 			}
+				$conn->close();
+			    return array("status" =>  "SUCCESS");
+
 		}else{
 			$conn -> close();
 			return array("status" => "CONNECTION WITH DB WENT WRONG");
