@@ -36,7 +36,6 @@
 		<h1>Menu</h1>
 		<ul id="menu">
 			<li id="PrivateHomePage"> Home Page</li>
-			<li > Menu </li>
 			<li id="PrivateContactPage"> Contact Us </li>
 			<li id="ProfilePage"> Profile </li>
 			
@@ -64,10 +63,6 @@
 
 				</ul>
 			</div>
-			
 		</div>
-
-
-
 	</body>
 </html>
