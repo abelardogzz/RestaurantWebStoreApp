@@ -169,11 +169,13 @@ var lastItem;
     });
 
 var TotalPrice = 0;
-var ItemsInOrder;
+var ItemsInOrder = [];
     $("#SearchFoodOptions").on("click","#AddToOrderbtn",function(){
         alert(lastItem.name);
         ItemsInOrder.push(lastItem); //Add item to the list of plates
+
         alert(ItemsInOrder);
+        console.log(ItemsInOrder);
          var newhtml ="";
                         newhtml += "<li>" +
                                     " <b>Name:</b> "+ lastItem.name + " "+
@@ -199,7 +201,7 @@ var ItemsInOrder;
             contentType : "application/x-www-form-urlencoded", /** Espesify bc default xml and it reads diferently*/
             success: function(jsonData){
                 /*On success, it returns an array of objects*/
-                
+                alert("ORDER PLACED");
             },
             error: function(errMessage){
                 alert("ERROR IN ORDER PLACEMENT");
