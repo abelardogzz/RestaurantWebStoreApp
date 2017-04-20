@@ -53,7 +53,9 @@ function loginFunction(){
 	$result = attemptLogin($userName,$remember);
  //echo "Haleloo";
 	if ($result["status"] == "SUCCESS"){
-		$Password = decryptPassword($result["password"]);
+		//No encryption defined
+		//$Password = decryptPassword($result["password"]);
+		$Password = $result["password"];
   //echo $Password;
 		if ($userPassword === $Password) {
 			echo json_encode(array("message" => "Login Successful"));
@@ -75,7 +77,9 @@ function RegistrationFunction(){
 	$Email = $_POST['email'];
 	$Address = $_POST['address'];
 
-	$userPassword = encryptPassword();
+	//No encryption implemented
+	//$userPassword = encryptPassword();
+	$userPassword = $_POST['userPassword'];
 
 	$result = attemptRegistration($FName,$LName,$userName,$Email,$userPassword,$Address);
 
