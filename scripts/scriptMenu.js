@@ -190,6 +190,7 @@ var ItemsInOrder = [];
     $("#CompleteOrderbtn").on("click",function(){
         var jsonToSend = {
                 "action" : "PLACEORDER",
+                "totalpayment" : TotalPrice,
                 "plates" : ItemsInOrder
         };
 

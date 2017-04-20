@@ -42,6 +42,8 @@ switch($action){
 
 	case "LOADUSERORDERS" : LoadUserOrders();
 					break;
+	case "PLACEORDER" : PlaceOrder();
+					break;
 
 }
 
@@ -342,6 +344,30 @@ function LoadUserOrders(){
 	}	
 }
 
+function PlaceOrder(){
+	session_start();
+
+	$username = $_SESSION["user"];
+	$address = $_SESSION["address"];
+	$totalpayment = $_POST["totalpayment"];
+	$plates = $_POST["plates"];
+	echo count($plates);
+
+	$result = attemptPlaceOrder($username,$address,$totalpayment,$plates);
+	
+	for ($i=0; $i < count($plates); $i++) { 
+		
+	}
+
+	if ($result["status"] == "SUCCESS"){
+
+		echo json_encode($result["orders"]);
+	}	
+	else{
+		header('HTTP/1.1 500' . $result["status"]);
+		die($result["status"]);
+	}
+}
 
 # Action to encrypt the password of the user
 function encryptPassword()
