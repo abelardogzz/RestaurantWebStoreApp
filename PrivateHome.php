@@ -10,7 +10,7 @@
 		unset($_SESSION["lName"]);
 		unset($_SESSION["Activity"]);
 		session_destroy();
-		//header("location: LoginIndex.php");
+		header("location: LoginIndex.php");
 	}
 ?>
 
