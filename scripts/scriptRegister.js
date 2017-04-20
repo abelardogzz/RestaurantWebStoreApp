@@ -124,7 +124,7 @@ $(document).ready(function(){
     // Redirects to Public Menu Page
     //--------------------------------------------------------------
     $("#MenuPage").on("click",function(){
-        window.location.replace("MenuPage.php");
+        window.location.replace("PublicMenuPage.php");
     });
     //--------------------------------------------------------------
 

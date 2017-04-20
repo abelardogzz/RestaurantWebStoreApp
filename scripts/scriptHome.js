@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 
-
+/// Public Versions
     //Redirect to Login page
     $("#LoginPage").on("click",function(){
         window.location.replace("Loginindex.php");
