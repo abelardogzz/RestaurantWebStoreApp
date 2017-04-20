@@ -30,9 +30,23 @@
 
 		<div id="MenuList">
 			<h1>Restuarant Food Options</h1>
-			<div >
+			<div id="menuList">
 				<ul id="FoodOptions">
-
+					<li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
+				    <li> <a href="#"> <img src="http://placehold.it/150x150" /> </a> </li>
 				</ul>
 			</div>
 			
