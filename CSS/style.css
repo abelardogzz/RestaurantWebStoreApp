@@ -25,7 +25,7 @@ h2{
 	background-color: #FFEB5B;
 	margin: 0;
 	padding: 20px;
-	color: white;
+	color: #4F545F;
 	text-align: center;
 }
 fieldset{
@@ -44,6 +44,11 @@ div.images {
 legend{
 	font-size: 1.3em;
 	font-weight: 900;
+}
+
+h3 {
+	font-weight: 900;
+	font-style: italic;
 }
 
 fieldset > span#InformationSpan{
