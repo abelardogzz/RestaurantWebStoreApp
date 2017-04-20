@@ -64,5 +64,16 @@
 				</ul>
 			</div>
 		</div>
+
+		<div id="MenuOrder">
+			<h2>Order</h2>
+			<div >
+				<ul id="OrderItems">
+
+				</ul>
+			</div>
+			
+		</div>
+
 	</body>
 </html>
