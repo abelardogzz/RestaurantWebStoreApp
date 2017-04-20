@@ -1,5 +1,38 @@
 $(document).ready(function(){
 
+//Loads Additional Information to the web page
+    var jsonToSend = {
+                "action" : "LOADMENU",
+        };
+    $.ajax({
+
+        
+            url:"data/applicationLayer.php",
+            type: "POST", <!--GET|POST|PUT-->
+            data: jsonToSend,
+            dataType: "json",
+            contentType : "application/x-www-form-urlencoded",
+            success: function(data){
+               var newhtml = "";
+
+                for (var x in data){
+                    newhtml += "<li>" 
+                                + data[x].Name +  "<br/>"
+                                + "<b>Description:</b> " + data[x].description +"<br/>" 
+                                + "Price: " + data[x].price  + "<br/>"
+                               + "</li>"
+                                ;
+                }
+
+                $("#FoodOptions").append(newhtml);
+            },
+            error: function(errorMsg){
+                alert("ERROR IN Menu");
+                    //alert(errorMessage.responseText);
+                alert(errorMsg.statusText);
+                console.log(errorMsg);
+            }
+   });
 
 /// Public Versions
     // Redirect to Login page
