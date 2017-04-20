@@ -28,7 +28,7 @@ switch($action){
 	//				break;
 	case "SEARCHFOOD" : SearchFood();
 					break;
-/*
+
 	case "SENDFRIENDREQUEST" : SendFriendRequest();
 					break;
 	case "LOADFRIENDREQUESTS" : LoadFriendRequests();
@@ -39,7 +39,7 @@ switch($action){
 					break;
 	case "LOADFRIENDLIST" : LoadFriendList();
 					break;
-*/
+
 	case "LOADUSERORDERS" : LoadUserOrders();
 					break;
 	case "PLACEORDER" : PlaceOrder();
@@ -160,36 +160,8 @@ function LogoutService(){
 	}
 }
 
-/*
-function PostComment(){
-	session_start();
-	if (isset($_SESSION["Activity"]) && (time() - $_SESSION["Activity"] < 1800)){
-		$userfName = $_SESSION["fName"] ;
-		$userlName = $_SESSION["lName"] ;
-		$username = $_SESSION["user"] ;
-		$useremail = $_SESSION["email"] ;
-	}
-	else{
-		echo json_encode(array("message" => "Session timeout"));
-	}
 
-	$comment = $_POST["comment"];
-	//echo $userfName.$userlName.$username.$useremail.$comment;
-	$result = attemptPostComment($username,$userfName,$userlName,$useremail,$comment);
-	//echo $result["status"];
-	//echo $result["comment"];
 
-	if( $result["status"] == "SUCCESS"){
-		//echo $result;
-		echo json_encode($result);
-	}
-	else{
-		header('HTTP/1.1 500' . $result["status"]);
-		die($result["status"]);
-	}
-}
-*/
-/*
 function SearchFriend(){
 	
 	
@@ -207,7 +179,7 @@ function SearchFriend(){
 		header('HTTP/1.1 500' . $result["status"]);
 		die($result["status"]);
 	}
-}*/
+}
 function SearchFood(){
 	$food2find = $_POST["food"];
 
@@ -229,84 +201,9 @@ function SearchFood(){
 }
 
 /*
-	function SendFriendRequest(){
+	
 
-		session_start();
-		
-		$username = $_SESSION["user"];
-		$newfriend = $_POST["newfriend"];
-
-		$result = attemptNewFriendRequest($username,$newfriend);
-
-		if ($result["status"] == "SUCCESS"){
-
-			echo json_encode(array("message" => "Request Sent"));
-		}	
-		else{
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-
-
-	}
-
-	function LoadFriendRequests(){
-
-		session_start();
-		
-		$username = $_SESSION["user"];
-		$result = attemptLoadFriendRequests($username);
-
-		if ($result["status"] == "SUCCESS"){
-
-			echo json_encode($result["friend"]);
-		}
-		elseif ($result["status"] == "REQUEST NOT FOUND") {
-				echo json_encode(array("message" => "No Request Found"));
-		}	
-		else{
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
-
-	function AcceptFriendRequest(){
-		session_start();
-		
-		$username = $_SESSION["user"];
-		$newfriend = $_POST["newfriend"];
-
-		$result = attmptAcceptFriendRequest($username,$newfriend);
-
-		if ($result["status"] == "SUCCESS"){
-
-			echo json_encode(array("message" => "Request ACCEPTED"));
-		}	
-		else{
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-
-
-	}
-
-	function RejectFriendRequest(){
-		session_start();
-		
-		$username = $_SESSION["user"];
-		$newfriend = $_POST["newfriend"];
-
-		$result = attmptRejectFriendRequest($username,$newfriend);
-
-		if ($result["status"] == "SUCCESS"){
-
-			echo json_encode(array("message" => "Request REJECTED"));
-		}	
-		else{
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
+	
 
 	function LoadFriendList(){
 	session_start();
@@ -324,7 +221,7 @@ function SearchFood(){
 		die($result["status"]);
 	}
 */
-}
+
 
 function LoadUserOrders(){
 	session_start();
