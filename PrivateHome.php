@@ -35,7 +35,6 @@
 
 		<h1>Home Page</h1>
 		<ul id="menu">
-			<li> Home Page</li>
 			<li id="PrivateMenuPage"> Menu </li>
 			<li id="PrivateContactPage"> Contact Us </li>
 			<li id="ProfilePage"> Profile </li>
