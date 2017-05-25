@@ -88,7 +88,7 @@
 					session_start();
 					$_SESSION["fName"] = $FName;
 					$_SESSION["lName"] = $LName;
-					$_SESSION["user"]  = $username;
+					$_SESSION["user"]  = $userName;
 					$_SESSION["address"] = $Address;
 
 					if($remember){
